@@ -1,0 +1,21 @@
+This directory contains the translations generated at JHU for the following LDC datasets
+1. CALLHOME Egyptian Arabic (1996) : train, dev, eval
+2. NIST HUB5 evaluation dataset (1997) : h5
+3. CALLHOME Egyptian Arabic - supplements : sup
+
+Four translations were to be generated for each reference segment (in ECA). These are (with number of segments):
+- ECA ’96 train : 20861
+- ECA ’96 dev : 6415
+- ECA ’96 test : 3044
+- 97 eval (H5) : 2800
+- ECA supplement : 2722 
+
+The files are in the TAB separated format (TSV)
+For each partition {train, dev, eval, h5, sup}, the source file is 
+callhome_{train,dev,eval,h5,sup}.ar
+
+The four reference translations are in separate files and match line-by-line the source segments
+callhome_{train,dev,eval,h5,sup}.en.{0,1,2,3}
+
+For some segments, extra (more than 4) translations were generated. These are stored in an overflow file.
+callhome_{train,dev,eval,h5,sup}.en.over
