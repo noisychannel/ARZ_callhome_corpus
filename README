@@ -1,1 +1,49 @@
-trans/README
+This directory contains the translations generated at JHU for the following LDC datasets
+1. CALLHOME Egyptian Arabic (1996) : train, dev, eval
+2. NIST HUB5 evaluation dataset (1997) : h5
+3. CALLHOME Egyptian Arabic - supplements : sup
+
+Four translations were to be generated for each reference segment (in ECA). These are (with number of segments):
+- ECA ’96 train : 20861
+- ECA ’96 dev : 6415
+- ECA ’96 test : 3044
+- 97 eval (H5) : 2800
+- ECA supplement : 2722 
+
+The files are in the TAB separated format (TSV)
+For each partition {train, dev, eval, h5, sup}, the source file is 
+callhome_{train,dev,eval,h5,sup}.ar
+
+The four reference translations are in separate files and match line-by-line the source segments
+callhome_{train,dev,eval,h5,sup}.en.{0,1,2,3}
+
+For some segments, extra (more than 4) translations were generated. These are stored in an overflow file.
+callhome_{train,dev,eval,h5,sup}.en.over
+
+------------
+ASR output
+------------
+We supply the ASR output from two systems for all of the datasets listed above.
+The ASR output is in the form of PLF (lattices), ASR 1-best output and the lattice-oracle
+Note that these ASR systems were tuned on the dev set and even though we provide the
+dev-ASR output, it should not be used as a test set.
+
+WER results for the two systems (SGMM-12, DNN-9) are :
+
+----------------------------------------------
+              ASR one-best                   |
+----------------------------------------------
+             |  dev  | dev2  |  sup  |  h5   |
+-------------|-------|-------|-------|-------|
+SAT+SGMM     | 58.06 | 56.46 | 63.29 | 61.41 |
+DNN-Ensemble | 50.31 | 49.54 | 58.15 | 55.76 |
+----------------------------------------------
+
+----------------------------------------------
+              ASR lattice oracle             |
+----------------------------------------------
+             |  dev  | dev2  |  sup  |  h5   |
+-------------|-------|-------|-------|-------|
+SAT+SGMM     | 33.33 | 33.17 | 41.67 | 38.40 |
+DNN-Ensemble | 23.56 | 23.34 | 32.22 | 28.16 |
+----------------------------------------------
