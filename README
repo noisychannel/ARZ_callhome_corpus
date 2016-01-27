@@ -2,9 +2,9 @@ The CALLHOME Egyptian Arabic Speech Translation Corpus
 ==================================================================
 
 This directory contains the translations generated at JHU for the following LDC datasets
-1. CALLHOME Egyptian Arabic (1996) : train, dev, eval
-2. NIST HUB5 evaluation dataset (1997) : h5
-3. CALLHOME Egyptian Arabic - supplements : sup
+1. CALLHOME Egyptian Arabic (1996) [LDC97T19] : train, dev, eval
+2. NIST HUB5 evaluation dataset (1997) [LDC2002T38] : h5
+3. CALLHOME Egyptian Arabic - supplements [LDC2002T39] : sup
 
 Four translations were to be generated for each reference segment (in ECA). These are (with number of segments):
 - ECA ’96 train : 20861
@@ -63,7 +63,7 @@ cite the following paper. A copy can be found in the doc/ directory.
       Month = {December}
     }
 
-Due to licensing restrictions, we cannot include the LDC Spanish transcripts with this dataset. We
+Due to licensing restrictions, we cannot include the LDC Egyptian Arabic transcripts with this dataset. We
 have, however, provided scripts that will construct our data splits. Modify the Makefile provided to
 point to the data directories for the ECA LDC corpora. Then run:
 
