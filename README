@@ -1,3 +1,6 @@
+The CALLHOME Egyptian Arabic Speech Translation Corpus
+==================================================================
+
 This directory contains the translations generated at JHU for the following LDC datasets
 1. CALLHOME Egyptian Arabic (1996) : train, dev, eval
 2. NIST HUB5 evaluation dataset (1997) : h5
@@ -47,3 +50,25 @@ DNN-Ensemble | 50.31 | 49.54 | 58.15 | 55.76 |
 SAT+SGMM     | 33.33 | 33.17 | 41.67 | 38.40 |
 DNN-Ensemble | 23.56 | 23.34 | 32.22 | 28.16 |
 ----------------------------------------------
+
+For a complete description of this corpus, and for citation in your own published research, please
+cite the following paper. A copy can be found in the doc/ directory.
+
+    @inproceedings{Kumar2014translations,
+      Title = {Translations of the CALLHOME Egyptian Arabic Corpus for Conversational Speech Translation},
+      Author = {Gaurav Kumar and Yuan Cao and Ryan Cotterell and Chris Callison-Burch and Daniel Povey and Sanjeev Khudanpur},
+      year = {2014},
+      Booktitle = {Proceedings of the International Workshop on Spoken Language Translation (IWSLT)},
+      Address = {Lake Tahoe, US},
+      Month = {December}
+    }
+
+Due to licensing restrictions, we cannot include the LDC Spanish transcripts with this dataset. We
+have, however, provided scripts that will construct our data splits. Modify the Makefile provided to
+point to the data directories for the ECA LDC corpora. Then run:
+
+    make
+
+You should end up with the processed transcripts in the corpora directory;
+
+    ls corpora/*.ar
